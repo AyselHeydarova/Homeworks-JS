@@ -2,17 +2,14 @@
 let myArray = ['Aysel', 'Heydarova', 25, 1994, undefined, false, '34', true];
 
 
-let newArray = [];
-
 function filterBy(Array, datatype) {
-     newArray = Array.filter((item) => {
-     return typeof(item) !== datatype;
- });
-}
+    let newArray = Array.filter((item) => typeof(item) !== datatype);
+    return newArray;
+ }
 
-filterBy(myArray,'string');
+console.log(filterBy(myArray, 'string'));
 
-filterBy(myArray, 'number');
+console.log(filterBy(myArray, 'number'));
 
-console.log(newArray);
+
 
